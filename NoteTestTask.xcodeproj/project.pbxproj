@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C557B0E52B7695B900081095 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557B0E42B7695B800081095 /* AddView.swift */; };
+		C557B0E82B769F6A00081095 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557B0E72B769F6A00081095 /* ItemModel.swift */; };
 		C586BF7A2B767F2B003EBD43 /* NoteTestTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BF792B767F2B003EBD43 /* NoteTestTaskApp.swift */; };
 		C586BF7E2B767F2D003EBD43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C586BF7D2B767F2D003EBD43 /* Assets.xcassets */; };
 		C586BF812B767F2D003EBD43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C586BF802B767F2D003EBD43 /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		C557B0E42B7695B800081095 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		C557B0E72B769F6A00081095 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		C586BF762B767F2B003EBD43 /* NoteTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C586BF792B767F2B003EBD43 /* NoteTestTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTestTaskApp.swift; sourceTree = "<group>"; };
 		C586BF7D2B767F2D003EBD43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C557B0E62B769F4D00081095 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C557B0E72B769F6A00081095 /* ItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C586BF6D2B767F2B003EBD43 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				C586BF792B767F2B003EBD43 /* NoteTestTaskApp.swift */,
+				C557B0E62B769F4D00081095 /* Models */,
 				C586BF8B2B768700003EBD43 /* Views */,
 				C586BF7D2B767F2D003EBD43 /* Assets.xcassets */,
 				C586BF7F2B767F2D003EBD43 /* Preview Content */,
@@ -151,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C557B0E82B769F6A00081095 /* ItemModel.swift in Sources */,
 				C557B0E52B7695B900081095 /* AddView.swift in Sources */,
 				C586BF7A2B767F2B003EBD43 /* NoteTestTaskApp.swift in Sources */,
 				C586BF882B7681FD003EBD43 /* ListView.swift in Sources */,

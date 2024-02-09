@@ -2,20 +2,28 @@ import SwiftUI
 
 struct ListRowView: View {
     
-    let title: String
-    
+    let item: ItemModel
     
     var body: some View {
         HStack {
-            Image(systemName: "circle.fill")
-            Text(title)
+            Image(systemName: item.isFavourite ? "heart.fill" : "heart")
+                .foregroundColor(item.isFavourite ? .red : .gray)
+            Text(item.title)
             Spacer()
         }
+        .font(.title2)
+        .padding(.vertical, 8)
     }
 }
 
 struct ListRowView_Previews: PreviewProvider {
+    
+    static var item1 = ItemModel(title: "first", isFavourite: true)
+    
     static var previews: some View {
-        ListRowView(title: "This is text")
+        Group {
+            ListRowView(item: item1)
+        }
+        .previewLayout(.sizeThatFits)
     }
 }
