@@ -30,6 +30,12 @@ class ListViewModel: ObservableObject {
         items.append(newItem)
     }
     
+    func updateItem(id: String, newTitle: String) {
+        if let index = items.firstIndex(where: { $0.id == id }) {
+            items[index] = ItemModel(id: id, title: newTitle, isFavourite: items[index].isFavourite)
+        }
+    }
+    
     func editFavouriteStatus(item: ItemModel) {
         if let index = items.firstIndex(where: { $0.id == item.id }) {
             items[index] = item.updateCompletion()
