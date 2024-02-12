@@ -1,17 +1,16 @@
-//
-//  NoteTestTaskApp.swift
-//  NoteTestTask
-//
-//  Created by Дербе Эмма on 09.02.2024.
-//
-
 import SwiftUI
 
 @main
 struct NoteTestTaskApp: App {
+    
+    @StateObject var listViewModel: ListViewModel = ListViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ListView()
+            }
+            .environmentObject(listViewModel)
         }
     }
 }
