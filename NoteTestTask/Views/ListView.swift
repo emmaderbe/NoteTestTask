@@ -1,9 +1,10 @@
 import SwiftUI
 
+//MARK: - Property
 struct ListView: View {
-    
     @EnvironmentObject var listViewModel: ListViewModel
     
+    //MARK: - add list of items, editFavouriteStatus and add onDelete && onMove
     var body: some View {
         List {
             ForEach(listViewModel.items) { item in
@@ -18,6 +19,7 @@ struct ListView: View {
             .onMove(perform: listViewModel.moveItem)
         }
         .listStyle(PlainListStyle())
+        //MARK: - Navigation Bar
         .navigationTitle("Notes 📝")
         .navigationBarItems(
             leading: EditButton(),
@@ -26,6 +28,7 @@ struct ListView: View {
     }
 }
 
+//MARK: - ListView_Prewiews
 struct ListView_Prewiews: PreviewProvider {
     static var previews: some View {
         NavigationView {

@@ -1,5 +1,6 @@
 import SwiftUI
 
+//MARK: - Navigation Bar
 struct ListRowView: View {
     let item: ItemModel
     
@@ -20,10 +21,9 @@ struct ListRowView: View {
     }
 }
 
+//MARK: - Navigation Bar
 struct ListRowView_Previews: PreviewProvider {
-    
     static var item1 = ItemModel(title: "first initial note", isFavourite: true)
-    
     static var previews: some View {
         Group {
             ListRowView(item: item1)

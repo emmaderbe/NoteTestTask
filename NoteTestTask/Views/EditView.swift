@@ -1,5 +1,6 @@
 import SwiftUI
 
+//MARK: - Properties, init and view
 struct EditView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var listViewModel: ListViewModel
@@ -35,7 +36,10 @@ struct EditView: View {
         }
         .navigationTitle("Edit your note 🖍️")
     }
-    
+}
+
+//MARK: - saveButtonPressed()
+extension EditView {
     func saveButtonPressed() {
         listViewModel.updateItem(id: item.id, newTitle: textFieldText)
         presentationMode.wrappedValue.dismiss()
@@ -43,6 +47,7 @@ struct EditView: View {
     }
 }
 
+//MARK: - saveButtonPressed()
     struct EditView_Previews: PreviewProvider {
         static var item1 = ItemModel(title: "", isFavourite: true)
         static var previews: some View {

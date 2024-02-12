@@ -1,5 +1,6 @@
 import SwiftUI
 
+//MARK: - Properties and view
 struct AddView: View {
     
     @Environment(\.presentationMode) var presentationMode
@@ -34,14 +35,20 @@ struct AddView: View {
         .navigationTitle("Add a note 🖋️")
         .alert(isPresented: $showAlert, content: getAlert)
     }
-    
+    }
+
+//MARK: - saveButtonPressed()
+extension AddView {
     func saveButtonPressed() {
         if textIsAppropriate() == true {
             listViewModel.addItem(title: textFieldText)
             presentationMode.wrappedValue.dismiss()
         }
     }
-    
+}
+
+//MARK: - textIsAppropriate()
+extension AddView {
     func textIsAppropriate() -> Bool {
         if textFieldText.count < 1 {
             alertTitle = "Please, add a note"
@@ -50,12 +57,18 @@ struct AddView: View {
         }
         return true
     }
-    
+
+}
+
+//MARK: - getAlert()
+extension AddView {
     func getAlert() -> Alert {
        return Alert(title: Text(alertTitle))
     }
+
 }
 
+//MARK: - AddView_Previews
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
