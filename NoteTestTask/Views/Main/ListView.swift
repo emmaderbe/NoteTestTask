@@ -18,7 +18,7 @@ struct ListView: View {
             .onDelete(perform: listViewModel.deletItem)
             .onMove(perform: listViewModel.moveItem)
         }
-        .listStyle(PlainListStyle())
+        .listStyle(InsetGroupedListStyle())
         //MARK: - Navigation Bar
         .navigationTitle("Notes 📝")
         .navigationBarItems(

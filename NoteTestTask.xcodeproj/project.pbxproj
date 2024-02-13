@@ -14,8 +14,11 @@
 		C586BF812B767F2D003EBD43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C586BF802B767F2D003EBD43 /* Preview Assets.xcassets */; };
 		C586BF882B7681FD003EBD43 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BF872B7681FD003EBD43 /* ListView.swift */; };
 		C586BF8A2B7686F0003EBD43 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BF892B7686EF003EBD43 /* ListRowView.swift */; };
+		C5C111CA2B7BC07100791EE7 /* FontEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C111C92B7BC07100791EE7 /* FontEnums.swift */; };
+		C5C111CC2B7BDFEA00791EE7 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C111CB2B7BDFEA00791EE7 /* TextExtension.swift */; };
 		C5D920202B78D64C003768E9 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9201F2B78D64B003768E9 /* ListViewModel.swift */; };
 		C5D920222B7930A0003768E9 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D920212B7930A0003768E9 /* EditView.swift */; };
+		C5D9202D2B7AA312003768E9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9202C2B7AA312003768E9 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +30,11 @@
 		C586BF802B767F2D003EBD43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C586BF872B7681FD003EBD43 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		C586BF892B7686EF003EBD43 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		C5C111C92B7BC07100791EE7 /* FontEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontEnums.swift; sourceTree = "<group>"; };
+		C5C111CB2B7BDFEA00791EE7 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		C5D9201F2B78D64B003768E9 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C5D920212B7930A0003768E9 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		C5D9202C2B7AA312003768E9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 				C557B0E62B769F4D00081095 /* Models */,
 				C5D9201E2B78D627003768E9 /* ViewModels */,
 				C586BF8B2B768700003EBD43 /* Views */,
+				C5C111CD2B7BDFF200791EE7 /* Extensions */,
 				C586BF7D2B767F2D003EBD43 /* Assets.xcassets */,
 				C586BF7F2B767F2D003EBD43 /* Preview Content */,
 			);
@@ -90,12 +97,19 @@
 		C586BF8B2B768700003EBD43 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C586BF872B7681FD003EBD43 /* ListView.swift */,
-				C586BF892B7686EF003EBD43 /* ListRowView.swift */,
-				C557B0E42B7695B800081095 /* AddView.swift */,
-				C5D920212B7930A0003768E9 /* EditView.swift */,
+				C5D9202F2B7AA436003768E9 /* Additional */,
+				C5D9202E2B7AA41B003768E9 /* Main */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C5C111CD2B7BDFF200791EE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C5C111C92B7BC07100791EE7 /* FontEnums.swift */,
+				C5C111CB2B7BDFEA00791EE7 /* TextExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C5D9201E2B78D627003768E9 /* ViewModels */ = {
@@ -104,6 +118,25 @@
 				C5D9201F2B78D64B003768E9 /* ListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C5D9202E2B7AA41B003768E9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C586BF872B7681FD003EBD43 /* ListView.swift */,
+				C586BF892B7686EF003EBD43 /* ListRowView.swift */,
+				C557B0E42B7695B800081095 /* AddView.swift */,
+				C5D920212B7930A0003768E9 /* EditView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C5D9202F2B7AA436003768E9 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				C5D9202C2B7AA312003768E9 /* CustomButton.swift */,
+			);
+			path = Additional;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C111CA2B7BC07100791EE7 /* FontEnums.swift in Sources */,
 				C557B0E82B769F6A00081095 /* ItemModel.swift in Sources */,
+				C5C111CC2B7BDFEA00791EE7 /* TextExtension.swift in Sources */,
 				C557B0E52B7695B900081095 /* AddView.swift in Sources */,
+				C5D9202D2B7AA312003768E9 /* CustomButton.swift in Sources */,
 				C5D920202B78D64C003768E9 /* ListViewModel.swift in Sources */,
 				C586BF7A2B767F2B003EBD43 /* NoteTestTaskApp.swift in Sources */,
 				C5D920222B7930A0003768E9 /* EditView.swift in Sources */,

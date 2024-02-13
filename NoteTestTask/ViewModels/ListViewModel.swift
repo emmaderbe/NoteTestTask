@@ -33,8 +33,8 @@ extension ListViewModel {
 
 //MARK: - addItem()
 extension ListViewModel {
-    func addItem(title: String) {
-       let newItem = ItemModel(title: title, isFavourite: false)
+    func addItem(title: String, fontStyle: String, fontSize: CGFloat, fontWeight: String) {
+       let newItem = ItemModel(title: title, isFavourite: false, fontStyle: fontStyle, fontSize: fontSize, fontWeight: fontWeight)
         items.append(newItem)
     }
 }

@@ -4,33 +4,29 @@ import SwiftUI
 struct EditView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var listViewModel: ListViewModel
+    
     var item: ItemModel
+    
     @State private var textFieldText: String
-
+    
     init(item: ItemModel) {
         self.item = item
         _textFieldText = State(initialValue: item.title)
     }
-
+    
     var body: some View {
         ScrollView {
             VStack {
                 TextField("Please, edit your note title here...", text: $textFieldText)
                     .padding(.horizontal)
-                    .frame(height: 50)
+                    .frame(height: UIScreen.main.bounds.height / 15)
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
-                Button(action: saveButtonPressed, label: {
-                    Text("Save".uppercased())
-                        .foregroundStyle(.white)
-                        .font(.headline)
-                        .frame(height: 50)
-                        .frame(maxWidth: .infinity)
-                        .background(Color(.systemBlue))
-                        .cornerRadius(10)
-                })
+                
+                CustomButton(text: "Save".uppercased(), backgroundColor: Color(.systemBlue)) {
+                    saveButtonPressed()
+                }
             }
-            .padding(.top, 15)
             .padding(14)
             
         }
@@ -48,12 +44,12 @@ extension EditView {
 }
 
 //MARK: - saveButtonPressed()
-    struct EditView_Previews: PreviewProvider {
-        static var item1 = ItemModel(title: "", isFavourite: true)
-        static var previews: some View {
-            NavigationView {
-                EditView(item: item1)
-            }
-            .environmentObject(ListViewModel())
+struct EditView_Previews: PreviewProvider {
+    static var item1 = ItemModel(title: "", isFavourite: true)
+    static var previews: some View {
+        NavigationView {
+            EditView(item: item1)
         }
+        .environmentObject(ListViewModel())
     }
+}
