@@ -6,12 +6,12 @@ struct ItemModel: Identifiable {
     var title: String
     let isFavourite: Bool
     
-    var fontStyle: String
+    var fontStyle: FontStyle
     var fontSize: CGFloat
-    var fontWeight: String
+    var fontWeight: FontWeight
     
     //MARK: - init()
-    init(id: String = UUID().uuidString, title: String, isFavourite: Bool, fontStyle: String = "body", fontSize: CGFloat = 18, fontWeight: String = "regular") {
+    init(id: String = UUID().uuidString, title: String, isFavourite: Bool, fontStyle: FontStyle = .body, fontSize: CGFloat = 18, fontWeight: FontWeight = .regular) {
         self.id = id
         self.title = title
         self.isFavourite = isFavourite

@@ -2,24 +2,24 @@ import SwiftUI
 
 //MARK: - editFontWeight()
 extension Text {
-    func editFontWeight(_ fontWeight: String) -> Text {
+    func editFontWeight(_ fontWeight: FontWeight) -> Text {
         switch fontWeight {
-        case "Bold":
+        case .bold:
             return self.bold()
-        case "Italic":
+        case .italic:
             return self.italic()
         default:
             return self
         }
     }
     
-    func applyFont(style: String, size: CGFloat) -> Text {
+    func applyFont(style: FontStyle, size: CGFloat) -> Text {
         switch style {
-        case "title":
+        case .title:
             return self.font(.system(size: size, weight: .bold))
-        case "headline":
+        case .headline:
             return self.font(.system(size: size, weight: .semibold))
-        case "subheadline":
+        case .subheadline:
             return self.font(.system(size: size, weight: .light))
         default:
             return self.font(.system(size: size))

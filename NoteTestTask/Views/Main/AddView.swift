@@ -11,9 +11,10 @@ struct AddView: View {
     @State var showAlert: Bool = false
     
     @State private var fontStyle: FontStyle = .body
-    @State private var fontSize: CGFloat = 14
+    @State private var fontSize: CGFloat = 18
     @State private var fontWeight: FontWeight = .regular
-    
+
+    //MARK: - add textField, NoteUpgradeView and CustomButton
     var body: some View {
         ScrollView {
             VStack {
@@ -23,37 +24,7 @@ struct AddView: View {
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
                 
-                Text("Upgrade your notion")
-                    .padding(.top, 30)
-                    .font(.headline)
-                
-                Text("1. Font style:")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 10)
-                Picker("Text style", selection: $fontStyle) {
-                    ForEach(FontStyle.allCases) { category in
-                        Text(category.rawValue).tag(category)
-                        
-                    }
-                }
-                .pickerStyle(.segmented)
-                
-                
-                Text("2. Text weight:")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 10)
-                Picker("Text weight", selection: $fontWeight) {
-                    ForEach(FontWeight.allCases) { category in
-                        Text(category.rawValue).tag(category)
-                        
-                    }
-                }
-                .pickerStyle(.segmented)
-                
-                Text("3. Font size: \(fontSize, specifier: "%.0f")")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 20)
-                Slider(value: $fontSize, in: 10...30, step: 1)
+                NoteUpgradeView(fontStyle: $fontStyle, fontSize: $fontSize, fontWeight: $fontWeight)
                     .padding(.bottom, 20)
                 
                 CustomButton(text: "Save".uppercased(), backgroundColor: Color(.systemBlue)) {
@@ -72,7 +43,7 @@ struct AddView: View {
 extension AddView {
     func saveButtonPressed() {
         if textIsAppropriate() == true {
-            listViewModel.addItem(title: textFieldText, fontStyle: fontStyle.rawValue, fontSize: fontSize, fontWeight: fontWeight.rawValue)
+            listViewModel.addItem(title: textFieldText, fontStyle: fontStyle, fontSize: fontSize, fontWeight: fontWeight)
             presentationMode.wrappedValue.dismiss()
         }
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-//MARK: - Properties
+//MARK: - enum for Font Weight
 enum FontWeight: String, CaseIterable, Identifiable {
     case bold = "Bold"
     case italic = "Italic"
@@ -9,7 +9,7 @@ enum FontWeight: String, CaseIterable, Identifiable {
     var id: FontWeight {self}
 }
 
-//MARK: - Properties
+//MARK: - enum for Font Style
 enum FontStyle: String, CaseIterable, Identifiable {
     case title = "Title"
     case headline = "Headline"

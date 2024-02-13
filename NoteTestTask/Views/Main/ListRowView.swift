@@ -1,6 +1,6 @@
 import SwiftUI
 
-//MARK: - Navigation Bar
+//MARK: - add left image and text
 struct ListRowView: View {
     let item: ItemModel
     

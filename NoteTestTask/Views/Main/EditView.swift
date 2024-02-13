@@ -9,11 +9,19 @@ struct EditView: View {
     
     @State private var textFieldText: String
     
+    @State private var fontStyle: FontStyle
+    @State private var fontSize: CGFloat
+    @State private var fontWeight: FontWeight
+    
     init(item: ItemModel) {
         self.item = item
+        _fontSize = State(initialValue: item.fontSize)
+        _fontStyle = State(initialValue: item.fontStyle)
         _textFieldText = State(initialValue: item.title)
+        _fontWeight = State(initialValue: item.fontWeight)
     }
-    
+   
+    //MARK: - add textField, NoteUpgradeView and CustomButton
     var body: some View {
         ScrollView {
             VStack {
@@ -22,6 +30,9 @@ struct EditView: View {
                     .frame(height: UIScreen.main.bounds.height / 15)
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
+                
+                NoteUpgradeView(fontStyle: $fontStyle, fontSize: $fontSize, fontWeight: $fontWeight)
+                    .padding(.bottom, 20)
                 
                 CustomButton(text: "Save".uppercased(), backgroundColor: Color(.systemBlue)) {
                     saveButtonPressed()
@@ -37,7 +48,7 @@ struct EditView: View {
 //MARK: - saveButtonPressed()
 extension EditView {
     func saveButtonPressed() {
-        listViewModel.updateItem(id: item.id, newTitle: textFieldText)
+        listViewModel.updateItem(id: item.id, newTitle: textFieldText, newFontStyle: fontStyle, newFontSize: fontSize, newFontWeight: fontWeight)
         presentationMode.wrappedValue.dismiss()
         
     }
