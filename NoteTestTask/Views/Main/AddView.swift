@@ -43,7 +43,7 @@ struct AddView: View {
 extension AddView {
     func saveButtonPressed() {
         if textIsAppropriate() == true {
-            listViewModel.addItem(title: textFieldText, fontStyle: fontStyle, fontSize: fontSize, fontWeight: fontWeight)
+            listViewModel.addItem(title: textFieldText, isFavourite: false, fontStyle: fontStyle.rawValue, fontSize: fontSize, fontWeight: fontWeight.rawValue)
             presentationMode.wrappedValue.dismiss()
         }
     }

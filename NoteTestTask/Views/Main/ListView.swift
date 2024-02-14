@@ -15,8 +15,7 @@ struct ListView: View {
                         }
                     }
             }
-            .onDelete(perform: listViewModel.deletItem)
-            .onMove(perform: listViewModel.moveItem)
+            .onDelete(perform: listViewModel.deleteItem(at:))
         }
         .listStyle(InsetGroupedListStyle())
         //MARK: - Navigation Bar
