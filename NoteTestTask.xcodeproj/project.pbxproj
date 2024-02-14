@@ -17,6 +17,8 @@
 		C5C111CA2B7BC07100791EE7 /* FontEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C111C92B7BC07100791EE7 /* FontEnums.swift */; };
 		C5C111CC2B7BDFEA00791EE7 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C111CB2B7BDFEA00791EE7 /* TextExtension.swift */; };
 		C5C111CF2B7BEB9A00791EE7 /* NoteUpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C111CE2B7BEB9A00791EE7 /* NoteUpgradeView.swift */; };
+		C5C111D22B7D0CD800791EE7 /* ItemCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5C111D02B7D0CD800791EE7 /* ItemCoreDataModel.xcdatamodeld */; };
+		C5C111D52B7D118D00791EE7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C111D42B7D118D00791EE7 /* CoreDataManager.swift */; };
 		C5D920202B78D64C003768E9 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9201F2B78D64B003768E9 /* ListViewModel.swift */; };
 		C5D920222B7930A0003768E9 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D920212B7930A0003768E9 /* EditView.swift */; };
 		C5D9202D2B7AA312003768E9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9202C2B7AA312003768E9 /* CustomButton.swift */; };
@@ -34,6 +36,8 @@
 		C5C111C92B7BC07100791EE7 /* FontEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontEnums.swift; sourceTree = "<group>"; };
 		C5C111CB2B7BDFEA00791EE7 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		C5C111CE2B7BEB9A00791EE7 /* NoteUpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUpgradeView.swift; sourceTree = "<group>"; };
+		C5C111D12B7D0CD800791EE7 /* TModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TModel.xcdatamodel; sourceTree = "<group>"; };
+		C5C111D42B7D118D00791EE7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C5D9201F2B78D64B003768E9 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C5D920212B7930A0003768E9 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		C5D9202C2B7AA312003768E9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -77,7 +81,8 @@
 		C586BF782B767F2B003EBD43 /* NoteTestTask */ = {
 			isa = PBXGroup;
 			children = (
-				C586BF792B767F2B003EBD43 /* NoteTestTaskApp.swift */,
+				C5C111D62B7D122000791EE7 /* Application */,
+				C5C111D32B7D117400791EE7 /* CoreData */,
 				C557B0E62B769F4D00081095 /* Models */,
 				C5D9201E2B78D627003768E9 /* ViewModels */,
 				C586BF8B2B768700003EBD43 /* Views */,
@@ -112,6 +117,23 @@
 				C5C111CB2B7BDFEA00791EE7 /* TextExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C5C111D32B7D117400791EE7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C5C111D42B7D118D00791EE7 /* CoreDataManager.swift */,
+				C5C111D02B7D0CD800791EE7 /* ItemCoreDataModel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C5C111D62B7D122000791EE7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C586BF792B767F2B003EBD43 /* NoteTestTaskApp.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		C5D9201E2B78D627003768E9 /* ViewModels */ = {
@@ -216,8 +238,10 @@
 				C557B0E82B769F6A00081095 /* ItemModel.swift in Sources */,
 				C5C111CC2B7BDFEA00791EE7 /* TextExtension.swift in Sources */,
 				C557B0E52B7695B900081095 /* AddView.swift in Sources */,
+				C5C111D22B7D0CD800791EE7 /* ItemCoreDataModel.xcdatamodeld in Sources */,
 				C5D9202D2B7AA312003768E9 /* CustomButton.swift in Sources */,
 				C5C111CF2B7BEB9A00791EE7 /* NoteUpgradeView.swift in Sources */,
+				C5C111D52B7D118D00791EE7 /* CoreDataManager.swift in Sources */,
 				C5D920202B78D64C003768E9 /* ListViewModel.swift in Sources */,
 				C586BF7A2B767F2B003EBD43 /* NoteTestTaskApp.swift in Sources */,
 				C5D920222B7930A0003768E9 /* EditView.swift in Sources */,
@@ -432,6 +456,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C5C111D02B7D0CD800791EE7 /* ItemCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C5C111D12B7D0CD800791EE7 /* TModel.xcdatamodel */,
+			);
+			currentVersion = C5C111D12B7D0CD800791EE7 /* TModel.xcdatamodel */;
+			path = ItemCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C586BF6E2B767F2B003EBD43 /* Project object */;
 }
