@@ -11,7 +11,7 @@ struct ListRowView: View {
                     Image(systemName: item.isFavourite ? "heart.fill" : "heart")
                         .foregroundColor(item.isFavourite ? .red : .gray)
                     Text(item.title)
-                        .applyFont(style: item.fontStyle, size: item.fontSize)
+                        .editTextStyle(style: item.fontStyle, size: item.fontSize)
                         .editFontWeight(item.fontWeight)
                     Spacer()
                 }

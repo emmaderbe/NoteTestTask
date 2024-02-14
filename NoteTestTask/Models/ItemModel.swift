@@ -11,7 +11,7 @@ struct ItemModel: Identifiable {
     var fontWeight: FontWeight
     
     //MARK: - init()
-    init(id: String = UUID().uuidString, title: String, isFavourite: Bool, fontStyle: FontStyle = .body, fontSize: CGFloat = 18, fontWeight: FontWeight = .regular) {
+    init(id: String = UUID().uuidString, title: String, isFavourite: Bool, fontStyle: FontStyle = .arial, fontSize: CGFloat = 18, fontWeight: FontWeight = .regular) {
         self.id = id
         self.title = title
         self.isFavourite = isFavourite

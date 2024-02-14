@@ -11,10 +11,10 @@ enum FontWeight: String, CaseIterable, Identifiable {
 
 //MARK: - enum for Font Style
 enum FontStyle: String, CaseIterable, Identifiable {
-    case title = "Title"
-    case headline = "Headline"
-    case body = "Body"
-    case subheadline = "Subheadline"
+    case arial = "Arial"
+    case menlo = "Menlo"
+    case noteworthy = "Noteworthy"
+    case courier = "Courier"
     
     var id: FontStyle {self}
 }

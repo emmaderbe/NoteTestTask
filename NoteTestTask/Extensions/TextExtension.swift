@@ -1,5 +1,12 @@
 import SwiftUI
 
+//MARK: - editTextStyle()
+extension Text {
+    func editTextStyle(style: FontStyle, size: CGFloat) -> Text {
+        self.font(.custom(style.rawValue, size: size))
+    }
+}
+
 //MARK: - editFontWeight()
 extension Text {
     func editFontWeight(_ fontWeight: FontWeight) -> Text {
@@ -10,19 +17,6 @@ extension Text {
             return self.italic()
         default:
             return self
-        }
-    }
-    
-    func applyFont(style: FontStyle, size: CGFloat) -> Text {
-        switch style {
-        case .title:
-            return self.font(.system(size: size, weight: .bold))
-        case .headline:
-            return self.font(.system(size: size, weight: .semibold))
-        case .subheadline:
-            return self.font(.system(size: size, weight: .light))
-        default:
-            return self.font(.system(size: size))
         }
     }
 }

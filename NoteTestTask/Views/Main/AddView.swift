@@ -10,7 +10,7 @@ struct AddView: View {
     @State var alertTitle: String = ""
     @State var showAlert: Bool = false
     
-    @State private var fontStyle: FontStyle = .body
+    @State private var fontStyle: FontStyle = .arial
     @State private var fontSize: CGFloat = 18
     @State private var fontWeight: FontWeight = .regular
 
